@@ -173,7 +173,7 @@ def send_email(articles, recipient_email):
     date_str = datetime.now().strftime("%B %d, %Y")
     
     message = Mail(
-        from_email='joshjdi24@gmail.com',  # SendGrid will override with verified sender
+        from_email='noreply@yourdailynews.org',  # SendGrid will override with verified sender
         to_emails=recipient_email,
         subject=f'Daily Digest — {date_str} — {len(articles)} articles',
         html_content=html_content
