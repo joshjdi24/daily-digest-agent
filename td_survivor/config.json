@@ -1,0 +1,54 @@
+{
+  "contest": "Swolecast $10K TD Survivor",
+  "current_week": 8,
+  "last_week": 18,
+  "_rules": "One primary per week (two in Week 1), no repeats. Rushing/receiving/return TDs count, passing TDs do not. The alternate only subs in if the primary is inactive, and is not burned if unused.",
+
+  "entries": {
+    "Entry 3": {
+      "used": ["Bi.Robinson|ATL", "O.Hampton|LAC", "C.McCaffrey|SF", "J.Gibbs|DET",
+               "D.Henry|BAL", "J.Williams|DAL", "J.Taylor|IND", "D.Swift|CHI"]
+    },
+    "Entry 4": {
+      "used": ["C.Brown|CIN", "J.Gibbs|DET", "D.Henry|BAL", "Bi.Robinson|ATL",
+               "J.Taylor|IND", "D.Swift|CHI", "J.Williams|DAL", "C.McCaffrey|SF"]
+    }
+  },
+  "_used_note": "'Robinson' is assumed to be Bijan (Bi.Robinson). If you actually used Brian Robinson Jr., change it to Br.Robinson|ATL.",
+
+  "_market_note": "Week-8 anytime-TD prices collected Oct 28-29, 2026 (BetMGM unless noted). The model de-vigs them and blends them 50/50 with its own projection.",
+  "market_odds": {
+    "8": {
+      "J.Gibbs|DET": -250, "D.Henry|BAL": -225, "C.Brown|CIN": -165, "K.Williams|LA": -165,
+      "J.Allen|BUF": -160, "J.Cook|BUF": -150, "J.Jacobs|GB": -145, "J.Warren|PIT": -125,
+      "B.Irving|TB": -125, "J.Smith-Njigba|SEA": -110, "C.Hubbard|CAR": -108,
+      "T.Pollard|TEN": -105, "S.Barkley|PHI": -105, "R.White|WAS": -105,
+      "C.Lamb|DAL": 110, "C.Watson|GB": 130, "Q.Judkins|CLE": 150, "M.Golden|GB": 160,
+      "T.McMillan|CAR": 175, "K.Walker|KC": -145, "J.Dobbins|DEN": 210, "T.Kelce|KC": 220
+    }
+  },
+  "vig_factor": 0.93,
+  "market_weight": 0.5,
+
+  "_injury_note": "Availability multipliers for Week 8 (1.0 = healthy). Q = 0.85, doubtful = 0.3, out = 0. Re-check the official report before lock.",
+  "injuries": {
+    "8": {
+      "S.Barkley|PHI": 0.85, "B.Hall|NYJ": 0.85, "J.Love|ARI": 0.85, "A.Jones|MIN": 0.85,
+      "T.Spears|TEN": 0.5, "J.Wright|MIA": 0.85,
+      "O.Hampton|LAC": 0.5
+    }
+  },
+
+  "model": {
+    "recency_decay": 0.85,
+    "xtd_weight": 0.65,
+    "future_week_discount": 0.85,
+    "home_field_pts": 1.5,
+    "rating_regression_games": 6,
+    "candidate_pool": 90,
+    "_min_games_note": "Small samples (a FB with 1 TD in 2 games) blow up share-based projections. Anyone with a market price this week is kept regardless.",
+    "min_games": 3,
+    "_stale_note": "Players with no snaps in the last N weeks (IR, e.g. Achane) are dropped.",
+    "stale_weeks": 2
+  }
+}
