@@ -14,3 +14,6 @@ env/
 .venv
 *.log
 .DS_Store
+
+# TD survivor data cache
+td_survivor/data/
