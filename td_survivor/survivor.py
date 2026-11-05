@@ -202,6 +202,11 @@ def apply_market_and_injuries(probs, players, cfg):
             pid = lookup[k]
             mw = cfg["market_weight"]
             probs.loc[pid, wk] = mw * mkt + (1 - mw) * probs.loc[pid, wk]
+    for k in cfg.get("out", []):
+        if k in lookup:
+            probs.loc[lookup[k]] = 0.0
+        else:
+            notes.append(f"out: {k} not found in play-by-play")
     for wk, inj in cfg.get("injuries", {}).items():
         for k, mult in inj.items():
             if k in lookup:
